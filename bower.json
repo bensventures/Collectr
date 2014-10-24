@@ -1,0 +1,16 @@
+{
+  "name": "collectr",
+  "version": "0.0.1",
+  "authors": [
+    "bensventures",
+    "mawrkus"
+  ],
+  "description": "Calculates end of employment benefits and fees",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "~0.11.2",
+    "amcharts": "~3.10.3",
+    "bootstrap": "~3.2.0"
+  }
+}
