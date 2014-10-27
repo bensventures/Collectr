@@ -5,50 +5,38 @@
 	<title></title>
 	<script src="./bower_components/react/react.js"></script>
 	<script src="./bower_components/react/JSXTransformer.js"></script>
+	<script src="./bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="./bower_components/conduitjs/lib/conduit.min.js"></script>
+	<script src="./bower_components/postal.js/lib/postal.js"></script>
+	<script src="./bower_components/postal.react/lib/postal.react.js"></script>
 
 </head>
 <body>
 <div id="app"></div>
 
+<script type="text/jsx" src="./components/form.jsx"></script>
+<script type="text/jsx" src="./components/visualization.jsx"></script>
+
 <script type="text/jsx">
 	/** @jsx React.DOM */
 	var capp = React.createClass({
+
 		render : function (){
 			return (
 				<div>
-					<cform />
-					<cvisualization />
+					<cform channel="data" />
+					<cvisualization channel="data" />
 				</div>
 			);
 		}
 	});
-
-	var cform = React.createClass({
-		render : function (){
-			return (
-				<form>
-					<input type="text" placeholder="Yearly gross salary" />
-					<input type="date" placeholder="Starting date" />
-					<input type="submit" value="Calculate" />
-				</form>
-			);
-		}
-	});
-
-	var cvisualization = React.createClass({
-		render : function (){
-			return (
-				<div>
-
-				</div>
-			);
-		}
-	});
-
 	React.renderComponent(
 		<capp />,
 		document.getElementById('app')
 	);
+
+	//http-server -p 3000 -a localhost
 </script>
+
 </body>
 </html>
